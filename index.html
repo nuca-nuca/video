@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>cocacola</title>
+    <style>
+        body {
+            background-image: url("cocacola.jpg");
+            background-size: cover;
+            margin: 0;
+        }
+        .video-wrapper {
+            position: relative;
+            height: 500px;
+        }
+        video {
+            position: absolute;
+            top: 0px;
+            left: 400px;
+            z-index: -1;
+        }
+        #goto20sec {
+            position: absolute;
+            top: 40px;
+            left: 400px;
+        }
+        audio {
+            position: absolute;
+            top: 0px;
+            left: 400px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="video-wrapper">
+    <video id="myvideo" width="800" autoplay muted loop controls >
+        <source src="cocacola.mp4" >
+    </video>
+</div>
+<button id="goto20sec" >
+    Go to 20 sec.
+</button>
+<audio controls
+       <source src="Coca%20Cola%20Christmas%20commercial%202010%20HD%20(Full%20advert).mp3"
+               </audio>
+
+<script>
+    v = document.getElementById("myvideo");
+    document.getElementById("goto20sec").addEventListener("click", function () {
+        v.currentTime = 20;
+    })
+
+</script>
+</body>
+</html>
